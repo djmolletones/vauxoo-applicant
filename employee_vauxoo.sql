@@ -38,9 +38,9 @@ INSERT INTO employee_department (name, description) VALUES ('Legal', 'Encargado 
 ALTER TABLE employee ADD id_departmet int;
 ALTER TABLE employee ADD FOREIGN KEY(id_departmet) REFERENCES employee_department(id)
 
-UPDATE employee SET id_departmet = 3 WHERE id = 1
-UPDATE employee SET id_departmet = 3 WHERE id = 2
-UPDATE employee SET id_departmet = 6 WHERE id = 3
-UPDATE employee SET id_departmet = 2 WHERE id = 4
+UPDATE employee SET id_departmet = 3 WHERE id = 1;
+UPDATE employee SET id_departmet = 3 WHERE id = 2;
+UPDATE employee SET id_departmet = 6 WHERE id = 3;
+UPDATE employee SET id_departmet = 2 WHERE id = 4;
 
 -- ...
