@@ -14,7 +14,7 @@ class CalculatorClass(object):
     def sum(self, num_list):
         """
         Suma el contenido de la lista num_list que es recibida como 
-		parametro y muestra el resultado por pantalla
+	parametro y muestra el resultado por pantalla
         """
         # your sum code here
         suma = 0
