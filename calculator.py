@@ -7,12 +7,14 @@ Date: 05/10/2016
 
 class CalculatorClass(object):
     """
-    Clases que define un método que permite obtener la sumatoria de una lista de numeros
+    Clases que define un método que permite obtener
+	la sumatoria de una lista de numeros
     """
 
     def sum(self, num_list):
         """
-        Suma el contenido de la lista num_list que es recibida como parametro y muestra el resultado por pantalla
+        Suma el contenido de la lista num_list que es recibida como 
+		parametro y muestra el resultado por pantalla
         """
         # your sum code here
         suma = 0
