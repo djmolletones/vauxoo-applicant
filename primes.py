@@ -8,11 +8,11 @@ Date: 05/10/2016
 class PrimeClass(object):
     def is_prime(self, num_int):
         """
-        Determina si un número es considerado 
+        Determina si un numero es considerado 
         primo al ser divisible por si mismo
         """
         for cont in range(2, num_int):
-            if (num_int%cont)==0:
+            if (num_int % cont) == 0:
                 return False
         return True
 
