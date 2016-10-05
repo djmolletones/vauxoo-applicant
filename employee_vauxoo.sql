@@ -17,6 +17,12 @@ CREATE TABLE employee_department (
   PRIMARY KEY (id)
 );
 
+CREATE TABLE employee_hobby (
+  id serial,
+  name varchar(80),
+  description varchar(200)
+);
+
 INSERT INTO employee (first_name, last_name) VALUES ('Juan', 'Santiago');
 INSERT INTO employee (first_name, last_name) VALUES ('Mariana', 'Lozada');
 INSERT INTO employee (first_name, last_name) VALUES ('Daniel', 'Ruiz');
