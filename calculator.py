@@ -7,7 +7,8 @@ Date: 05/10/2016
 
 class CalculatorClass(object):
     """
-    Clase que define un metodo que permite obtenerla sumatoria de una lista de numeros
+    Clase que define un metodo que permite
+    obtenerla sumatoria de una lista de numeros
     """
     def sum(self, num_list):
         """
@@ -15,11 +16,11 @@ class CalculatorClass(object):
         parametro y muestra el resultado por pantalla
         """
         suma = 0
-        i = 0
-        for i in num_list:
+        cont = 0
+        for cont in num_list:
             suma = suma + i
         print 'La sumatoria es:' + str(suma)
-
+        
 lista = []
 sumatoria = CalculatorClass()
 cantidad_lista = int(input('Indique la cantidad de numeros a sumar: '))
