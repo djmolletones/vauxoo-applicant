@@ -18,9 +18,9 @@ class CalculatorClass(object):
         suma = 0
         cont = 0
         for cont in num_list:
-            suma = suma + i
+            suma = suma + cont
         print 'La sumatoria es:' + str(suma)
-        
+
 lista = []
 sumatoria = CalculatorClass()
 cantidad_lista = int(input('Indique la cantidad de numeros a sumar: '))
