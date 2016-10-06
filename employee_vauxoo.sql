@@ -33,3 +33,29 @@ UPDATE employee SET id_department = 3 WHERE id = 1;
 UPDATE employee SET id_department = 3 WHERE id = 2;
 UPDATE employee SET id_department = 6 WHERE id = 3;
 UPDATE employee SET id_department = 2 WHERE id = 4;
+
+CREATE TABLE employee_hobby (
+  id serial,
+  name varchar(80),
+  description varchar(200)
+);
+INSERT INTO employee_hobby (name, description) VALUES ('Running', 'Correr para mantenerse saludable');
+INSERT INTO employee_hobby (name, description) VALUES ('Music', 'Escuchar música');
+INSERT INTO employee_hobby (name, description) VALUES ('Yoga', 'Practicar Yoga para sentir Paz y Armonia');
+
+CREATE TABLE employee_hobby_rel (
+  id serial,
+  id_employee int,
+  id_hobby int,
+  CONSTRAINT fk_employee FOREIGN KEY (id_employee) REFERENCES employee (id),
+  CONSTRAINT fk_employee_hobby FOREIGN KEY (id_hobby) REFERENCES employee_hobby (id)
+);
+
+INSERT INTO employee_hobby_rel VALUES (1, 2);
+INSERT INTO employee_hobby_rel VALUES (1, 1);
+INSERT INTO employee_hobby_rel VALUES (2, 3);
+INSERT INTO employee_hobby_rel VALUES (2, 1);
+INSERT INTO employee_hobby_rel VALUES (3, 1);
+INSERT INTO employee_hobby_rel VALUES (3, 2);
+INSERT INTO employee_hobby_rel VALUES (4, 2);
+INSERT INTO employee_hobby_rel VALUES (4, 3);
