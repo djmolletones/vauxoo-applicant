@@ -14,11 +14,7 @@ CREATE TABLE employee_department (
   description varchar(200),
   PRIMARY KEY (id)
 );
-CREATE TABLE employee_hobby (
-  id int,
-  name varchar(80),
-  description varchar(200)
-);
+
 INSERT INTO employee VALUES (1, 'Juan', 'Santiago');
 INSERT INTO employee VALUES (2, 'Mariana', 'Lozada');
 INSERT INTO employee VALUES (3, 'Daniel', 'Ruiz');
@@ -37,4 +33,3 @@ UPDATE employee SET id_department = 3 WHERE id = 1;
 UPDATE employee SET id_department = 3 WHERE id = 2;
 UPDATE employee SET id_department = 6 WHERE id = 3;
 UPDATE employee SET id_department = 2 WHERE id = 4;
--- ...
