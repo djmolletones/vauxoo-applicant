@@ -59,3 +59,26 @@ INSERT INTO employee_hobby_rel VALUES (3, 1);
 INSERT INTO employee_hobby_rel VALUES (3, 2);
 INSERT INTO employee_hobby_rel VALUES (4, 2);
 INSERT INTO employee_hobby_rel VALUES (4, 3);
+
+-- Se establecera una relacion con una tabla de Cargos
+-- para indicar que empleados son jefes
+-- utilizando el Departamento se puede crear una vista
+-- para obtener jefes y subordinados por departamentos
+CREATE TABLE cargos (
+  id serial,
+  name varchar(80),
+  description varchar(80),
+  PRIMARY KEY (id)
+);
+
+INSERT INTO cargos (name, description) VALUES ('Gerente', 'Gerente');
+INSERT INTO cargos (name, description) VALUES ('Jefe de Area', 'Jefe de Area');
+INSERT INTO cargos (name, description) VALUES ('Analista', 'Analista');
+
+ALTER TABLE employee ADD id_cargos int;
+ALTER TABLE employee ADD FOREIGN KEY(id_cargos) REFERENCES cargos(id);
+
+UPDATE employee SET id_cargos = 1 WHERE id = 2;
+UPDATE employee SET id_cargos = 2 WHERE id = 1;
+UPDATE employee SET id_cargos = 3 WHERE id = 3;
+UPDATE employee SET id_cargos = 3 WHERE id = 4;
